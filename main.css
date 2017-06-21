@@ -1,0 +1,10 @@
+.display-image{
+	width: 80%;
+	height: 80%;
+	display: block;
+	margin: auto;
+	position: relative;
+}
+.row{
+	padding: 10px;
+}
