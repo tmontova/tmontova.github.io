@@ -1,0 +1,17 @@
+#big-stupid-div{
+	background-color: red;
+	height: 100px;
+	width: 100px;
+}
+#sponge{
+	height:100px;
+	width:80px;
+}
+#rocket{
+	height:25%;
+}
+
+.blurry-text {
+   color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

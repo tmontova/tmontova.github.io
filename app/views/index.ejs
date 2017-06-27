@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="test-scr.js"></script>
+<link rel="stylesheet" type="text/css" href="test-sty.css">
+<script>
+$(document).ready(function(){
+	      $('.display-image').click(function(){
+        var src_val = $(this).attr("src");
+        var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
+        $('.modal-body').html(modal_image);
+      });
+	  });
+</script>
+
+	</head>
+
+
+<body class="col-md-8 col-md-offset-2">
+<div><h4>t.montovani</h4></div>
+  <div class="container picture-array">
+
+	<%for (var result in data){%>
+    	<div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal">
+          <img class="display-image" src=img/<%= data[result].filename %>>
+    	</div>
+  	<%}%>
+
+
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

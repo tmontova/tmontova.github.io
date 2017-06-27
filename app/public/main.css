@@ -1,0 +1,29 @@
+.display-image{
+	width: 80%;
+	height: 80%;
+	position: absolute;
+}
+.row{
+	padding: 10px;
+	height: 100px;
+}
+.item{
+	height: 300px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.display-image:hover{
+	width: 100%;
+	height: 100%;
+}
+.modal-image {
+	height: 600px;
+}
+.modal-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+

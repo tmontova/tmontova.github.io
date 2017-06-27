@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="test-scr.js"></script>
+<link rel="stylesheet" type="text/css" href="test-sty.css">
+	</head>
+
+  <script>
+  var images = ["05251701.png",
+                "05251702.png",
+                "1020161.jpg",
+                "1020294.jpg",
+                "1020345.jpg",
+                "20170422_231031.jpg",
+                "P1000330.jpg",
+                "P1000341.jpg",
+                "P1000369.jpg",
+                "P1000424.jpg",
+                "P1000500.jpg",
+                "P1000573.jpg",
+                "P1000610.jpg",
+                "P1000689.jpg",
+                "P1000699.jpg",
+                "P1000888.jpg",
+                "P1010015.jpg",
+                "P1010060.jpg",
+                "P1010202.jpg",
+                "P1010398.jpg",
+                "P1010609.jpg",
+                "P1010718.jpg",
+                "P1010740.jpg",
+                "P1010764.jpg",
+                "P1010788.jpg",
+                "P1010809.jpg",
+                "P1010863.jpg",
+                "P1010927.jpg",
+                "P1020034.jpg",
+                "P1020035.jpg",
+                "P1020422.jpg",
+                "P1020598.jpg",
+                "P1020670.jpg"];
+    $(document).ready(function(){
+      var appendRow = function(){
+      var picturerow = '<div class="row">';
+      var usedImages;
+
+      for(var i = 0; i < 3; i++){
+
+        var element = Math.floor(Math.random()*images.length);
+        var photoElements = '<div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal">'
+          +'<img class="display-image" src="img/'
+            + images[element]
+          + '">'
+        + '</div>'
+        picturerow = picturerow + photoElements;
+        images.splice(element, 1)
+      }
+
+      picturerow = picturerow + '</div>';
+      $('.picture-array').append(picturerow);
+
+      $('.display-image').click(function(){
+        var src_val = $(this).attr("src");
+        var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
+        $('.modal-body').html(modal_image);
+      });
+
+    }
+    appendRow();
+    appendRow();
+    appendRow();
+    });
+  </script>
+<body class="col-md-8 col-md-offset-2">
+<div><h4>t.montovani</h4></div>
+  <div class="container picture-array">
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
