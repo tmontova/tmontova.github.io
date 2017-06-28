@@ -10,6 +10,7 @@ app.get('/', function(req, res){
 	MongoClient.connect('mongodb://localhost:27017/mern-starter', function(err, db){
 		if(err) throw err
 
+		//this doesn't actually do what it is supposed to
 		db.collection('images').find().limit(9).skip(Math.random()*db.collection('images').count()).toArray(function(err, result){
 			if (err) throw err
 			res.render('index', {
