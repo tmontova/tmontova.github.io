@@ -35,9 +35,9 @@
     var newPhotos = function(){
     var usedElems = [];
     for(var i = 1; i < 10; i++){
-      var element = Math.floor(Math.random()*50+1);
+      var element = Math.floor(Math.random()*49+1);
       while(usedElems.includes(element)){
-        element = Math.floor(Math.random()*50+1);
+        element = Math.floor(Math.random()*49+1);
       }
       $('#image-'+i).attr("src", "img/oregon-compressed-"+element+".jpg");
       usedElems.push(element);
@@ -105,7 +105,7 @@
         
       </div>
           <div class="modal-footer">
-        <h3>Only Number One</h3><h4>[1/9]</h4>
+        <h3>Oregon</h3><h4>[1/9]</h4>
         <p>In more ways than a few, Oregon was a trip of doubling back. 
 Part Twos. 
 The Sequel.
