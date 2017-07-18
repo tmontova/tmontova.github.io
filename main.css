@@ -22,10 +22,10 @@
 	height: 600px;
 }
 .modal-content{
-	height: 800px;
+	height: 850px;
 }
 .modal-body{
-		display: flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
