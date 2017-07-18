@@ -22,7 +22,15 @@
 	height: 600px;
 }
 .modal-content{
-	display: flex;
+	height: 800px;
+}
+.modal-body{
+		display: flex;
 	align-items: center;
 	justify-content: center;
 }
+.modal-footer{
+	align-items: center;
+	justify-content: center;
+}
+

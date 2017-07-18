@@ -16,44 +16,21 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src="test-scr.js"></script>
 <link rel="stylesheet" type="text/css" href="test-sty.css">
 	</head>
 
   <script>
-  var images = ["05251701.png",
-                "05251702.png",
-                "1020161.jpg",
-                "1020294.jpg",
-                "1020345.jpg",
-                "20170422_231031.jpg",
-                "P1000330.jpg",
-                "P1000341.jpg",
-                "P1000369.jpg",
-                "P1000424.jpg",
-                "P1000500.jpg",
-                "P1000573.jpg",
-                "P1000610.jpg",
-                "P1000689.jpg",
-                "P1000699.jpg",
-                "P1000888.jpg",
-                "P1010015.jpg",
-                "P1010060.jpg",
-                "P1010202.jpg",
-                "P1010398.jpg",
-                "P1010609.jpg",
-                "P1010718.jpg",
-                "P1010740.jpg",
-                "P1010764.jpg",
-                "P1010788.jpg",
-                "P1010809.jpg",
-                "P1010863.jpg",
-                "P1010927.jpg",
-                "P1020034.jpg",
-                "P1020035.jpg",
-                "P1020422.jpg",
-                "P1020598.jpg",
-                "P1020670.jpg"];
+  var images = ["oregon-compressed-1.jpg",
+                "oregon-compressed-2.jpg",
+                "oregon-compressed-3.jpg",
+                "oregon-compressed-4.jpg",
+                "oregon-compressed-5.jpg",
+                "oregon-compressed-6.jpg",
+                "oregon-compressed-7.jpg",
+                "oregon-compressed-8.jpg",              
+                "oregon-compressed-9.jpg",
+                "oregon-compressed-10.jpg"];
+
     $(document).ready(function(){
       var appendRow = function(){
       var picturerow = '<div class="row">';
@@ -75,7 +52,7 @@
 
       $('.display-image').click(function(){
         var src_val = $(this).attr("src");
-        var modal_image = '<img class="modal-image" src="'+src_val+'">';
+        var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
         console.log(modal_image);
         $('.modal-body').html(modal_image);
         
@@ -100,6 +77,11 @@
       <div class="modal-body">
         
       </div>
+          <div class="modal-footer">
+        <h3>Oregon</h3><h4>[3/9]</h4>
+        <p>This is the content of the piece. This is all sample text. I'm jsut seeing how many workds I can plop down in here
+        and still have it be somewhat reasonable. Hopefully it is a decent amount but not too much</p>
+    </div>
     </div>
   </div>
 </div>
