@@ -1,233 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+	<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="main.css">
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="test-sty.css">
-	</head>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
 
-  <script>
+	<link rel="stylesheet" type="text/css" href="test-sty.css">
+</head>
+
+<script>
 
 
-    $(document).ready(function(){
+	$(document).ready(function(){
 
-      $('.display-image').click(function(){
-        var src_val = $(this).attr("src");
-        var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
-        console.log(modal_image);
-        $('.modal-body').html(modal_image);
-        
-      });
+		var footerText = [
+						"<h3>Oregon</h3><h4>[1/9]</h4>"
+						+"<p>In more ways than a few, Oregon was a trip of doubling back. "
+						+"Part Twos. "
+						+"The Sequel."
+						+"Try again."
+						+"Do over."
+						+"That type of thing. "
+						+"</p>",
+						"<h3>Oregon</h3><h4>[2/9]</h4>"
+					+"<p> My car battery died more than once before I left my parking garage in Seattle. I missed my turn more than three times before I made my first stop. I dropped a handful of blueberries in between the arm rest and the center console before I finished the first tub. I remembered what the hell I’m doing with my life.</p>",
+					"<h3>Oregon</h3><h4>[3/9]</h4>"
+					+"<p>Dipping my teva-clad toes in the salty bathtub to the Left (the Pacific) for the first time got me all jazzed up. I forgot about life and passed out cold on the sand. I woke to a rad new sunburn for me to pick at for the next few days (everyone needs some good camp-entertainment).</p>",
+					"<h3>Oregon</h3><h4>[4/9]</h4>"
+					+"<p>I knew I was going to get sunburned, but my buns stayed planted firm in the ground. Moments don’t grab me often, I get pre-occupied, I’m a goal oriented being. But if a driftwood pillow on a deserted beach doesn’t grab your attention, then you’re not alive. And for the first time in awhile, I felt alive. Thank you Oregon.</p>",
+					"<h3>Oregon</h3><h4>[5/9]</h4>"
+					+"<p>I quite publically announced my battles with the Wilson River as they unfolded. By publically, I mean to any and all available ducks and to the fly fisherman several hundred meter upstream. This slimy aquatic lake runoff (rivers are just big glorified pond leaks) didn’t want me on the other side of it. But listen here, because I’ll tell ya what. Life is about picking your battles. And I’ve chosen all the battles that no one else wants to fight. Not because they’re too difficult, but because there is very little reward. I like to suffer in peace.</p>",
+					"<h3>Oregon</h3><h4>[6/9]</h4>"
+					+"<p>Three trips across the Wilson to ferry all of my gear across left me a man alone in the woods, taunting a river. I promptly apologized later in the evening after remembering we’d be at odds again in the morning when I try to get back to the car. But once again, let me tell you, when I had crossed the Wilson for the final time this trip, that sucker got one hell of a fist waggling.</p>",
+					"<h3>Oregon</h3><h4>[7/9]</h4>"
+					+"<p>I consider myself a relatively hardened outdoor enthusiast. And by that, I mean I’ve gotten myself in enough situations to accept that it will happen regularly. But boy howdy. I should stop going to the desert. Or I should stop going midday in the summer. Two hours of riding in that sandbox in the sky and even #sunhat couldn’t save me from some deep psychological questions about myself. I was channeling the song ‘Just The Two of Us’ for some time over this endeavor and that made me really doubt whether or not I thought there was someone else with me (#therewasnt). </p>",
+					"<h3>Oregon</h3><h4>[8/9]</h4>"
+					+"<p>My last complaint is to the US Forestry Service. You’d think with a name like that, they could identify that Ochoco National Forest is not a forest. It’s a desert. It’s hot. That should be in the title. Ochoco Festival of Hotness and Misery. (#sunhat required)</p>",
+					"<h3>Oregon</h3><h4>[9/9]</h4>"
+					+"<p>Hot Dog that was fun. I’ll be back Oregon, and I’ll dig those blueberries out of my cupholder one day. #4000milesofroadtripsand0timescleaningmycar</p>"
+		];
 
-    var newPhotos = function(){
-    var usedElems = [];
-    for(var i = 1; i < 10; i++){
-      var element = Math.floor(Math.random()*49+1);
-      while(usedElems.includes(element)){
-        element = Math.floor(Math.random()*49+1);
-      }
-      $('#image-'+i).attr("src", "img/oregon-compressed-"+element+".jpg");
-      usedElems.push(element);
-    }
-  }
-  newPhotos();
 
-  $('#somethingElse').click(function(){
-    newPhotos();
-  });
 
-    });
-  </script>
+
+		$('#somethingElse').click(function(){
+			newPhotos();
+		});
+
+		var imageSelect = function(numberImagesToSelect){
+			var imgSrcList = [];
+			var usedElems = [];
+
+			for(var i = 0; i < numberImagesToSelect; i++){
+				var element = Math.floor(Math.random()*49+1);
+
+				while(usedElems.includes(element)){
+					element = Math.floor(Math.random()*49+1);
+				}
+				usedElems.push(element);
+
+				var src = "src='img/oregon-compressed-"+element+".jpg'";
+				imgSrcList.push(src);
+			}
+			return imgSrcList;
+		}
+
+		var newPhotos = function(){
+			var pictureArrayHTML = "";
+			var usedElems = [];
+			var imgSrcList = imageSelect(9);
+			$('.picture-array').html("");
+
+			for(var i = 0; i < 3; i++){
+
+				var row = "<div class='row'>";
+
+				for(var j = 0; j < 3; j++){
+					var itemNumber = 3*i+j;
+					var src = imgSrcList[itemNumber];
+
+					row += "<div class='col-md-4 item'>";
+					row += "<img class='display-image' id='image-"+itemNumber+"'"+src+" data-number="+itemNumber+">";
+					row += "</div>";
+				}
+
+				row += "</div>";
+				pictureArrayHTML += row;
+
+			}
+			$('.picture-array').html(pictureArrayHTML);
+
+			$('.display-image').click(function(){
+				$('#photo-modal').modal('show');
+				var src_val = $(this).attr("src");
+				var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
+				var modal_text = footerText[$(this).attr('data-number')];
+				$('.modal-body').html(modal_image);
+				$('.modal-footer').html(modal_text);
+			});
+
+		}
+		newPhotos();
+
+
+	});
+</script>
 <body class="col-md-8 col-md-offset-2">
-<div class="col-md-10"><h4>t.montovani</h4></div>
-<div class="col-md-2">
-  <input class="btn btn-default" type="button" value="something else" id="somethingElse">
-</div>
-  <div class="container picture-array">
+	<div class="col-md-10"><h4>t.montovani</h4></div>
+	<div class="col-md-2">
+		<input class="btn btn-default" type="button" value="something else" id="somethingElse">
+	</div>
+	<div class="container picture-array">
+	</div>
 
-<div class="row">
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-1">
-    <img class="display-image" id="image-1">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-2">
-    <img class="display-image" id="image-2">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-3">
-    <img class="display-image" id="image-3">
-  </div>
-</div>
+	<!-- Modal -->
+	<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
 
-<div class="row">
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-4">
-    <img class="display-image" id="image-4">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-5">
-    <img class="display-image" id="image-5">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-6">
-    <img class="display-image" id="image-6">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-7">
-    <img class="display-image" id="image-7">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-8">
-    <img class="display-image" id="image-8">
-  </div>
-  <div class="col-md-4 item" data-toggle="modal" data-target="#photo-modal-9">
-    <img class="display-image" id="image-9">
-  </div>
-</div>
-
-
-  </div>
-
-<!-- Modal -->
-<div class="modal fade" id="photo-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[1/9]</h4>
-        <p>In more ways than a few, Oregon was a trip of doubling back. 
-Part Twos. 
-The Sequel.
-Try again.
-Do over.
-That type of thing. 
-</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[2/9]</h4>
-        <p> My car battery died more than once before I left my parking garage in Seattle. I missed my turn more than three times before I made my first stop. I dropped a handful of blueberries in between the arm rest and the center console before I finished the first tub. I remembered what the hell I’m doing with my life.</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[3/9]</h4>
-        <p>Dipping my teva-clad toes in the salty bathtub to the Left (the Pacific) for the first time got me all jazzed up. I forgot about life and passed out cold on the sand. I woke to a rad new sunburn for me to pick at for the next few days (everyone needs some good camp-entertainment).</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[4/9]</h4>
-        <p>I knew I was going to get sunburned, but my buns stayed planted firm in the ground. Moments don’t grab me often, I get pre-occupied, I’m a goal oriented being. But if a driftwood pillow on a deserted beach doesn’t grab your attention, then you’re not alive. And for the first time in awhile, I felt alive. Thank you Oregon.</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[5/9]</h4>
-        <p>I quite publically announced my battles with the Wilson River as they unfolded. By publically, I mean to any and all available ducks and to the fly fisherman several hundred meter upstream. This slimy aquatic lake runoff (rivers are just big glorified pond leaks) didn’t want me on the other side of it. But listen here, because I’ll tell ya what. Life is about picking your battles. And I’ve chosen all the battles that no one else wants to fight. Not because they’re too difficult, but because there is very little reward. I like to suffer in peace.</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[6/9]</h4>
-        <p>Three trips across the Wilson to ferry all of my gear across left me a man alone in the woods, taunting a river. I promptly apologized later in the evening after remembering we’d be at odds again in the morning when I try to get back to the car. But once again, let me tell you, when I had crossed the Wilson for the final time this trip, that sucker got one hell of a fist waggling.</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[7/9]</h4>
-        <p>I consider myself a relatively hardened outdoor enthusiast. And by that, I mean I’ve gotten myself in enough situations to accept that it will happen regularly. But boy howdy. I should stop going to the desert. Or I should stop going midday in the summer. Two hours of riding in that sandbox in the sky and even #sunhat couldn’t save me from some deep psychological questions about myself. I was channeling the song ‘Just The Two of Us’ for some time over this endeavor and that made me really doubt whether or not I thought there was someone else with me (#therewasnt). </p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[8/9]</h4>
-        <p>My last complaint is to the US Forestry Service. You’d think with a name like that, they could identify that Ochoco National Forest is not a forest. It’s a desert. It’s hot. That should be in the title. Ochoco Festival of Hotness and Misery. (#sunhat required)</p>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="photo-modal-9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        
-      </div>
-          <div class="modal-footer">
-        <h3>Oregon</h3><h4>[9/9]</h4>
-        <p>Hot Dog that was fun. I’ll be back Oregon, and I’ll dig those blueberries out of my cupholder one day. #4000milesofroadtripsand0timescleaningmycar</p>
-    </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
