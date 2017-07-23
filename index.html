@@ -21,62 +21,101 @@
 
 	$(document).ready(function(){
 
-		var footerText = [
-						"<h3>Oregon</h3><h4>[1/9]</h4>"
-						+"<p>In more ways than a few, Oregon was a trip of doubling back. "
-						+"Part Twos. "
-						+"The Sequel."
-						+"Try again."
-						+"Do over."
-						+"That type of thing. "
-						+"</p>",
-						"<h3>Oregon</h3><h4>[2/9]</h4>"
-					+"<p> My car battery died more than once before I left my parking garage in Seattle. I missed my turn more than three times before I made my first stop. I dropped a handful of blueberries in between the arm rest and the center console before I finished the first tub. I remembered what the hell I’m doing with my life.</p>",
-					"<h3>Oregon</h3><h4>[3/9]</h4>"
-					+"<p>Dipping my teva-clad toes in the salty bathtub to the Left (the Pacific) for the first time got me all jazzed up. I forgot about life and passed out cold on the sand. I woke to a rad new sunburn for me to pick at for the next few days (everyone needs some good camp-entertainment).</p>",
-					"<h3>Oregon</h3><h4>[4/9]</h4>"
-					+"<p>I knew I was going to get sunburned, but my buns stayed planted firm in the ground. Moments don’t grab me often, I get pre-occupied, I’m a goal oriented being. But if a driftwood pillow on a deserted beach doesn’t grab your attention, then you’re not alive. And for the first time in awhile, I felt alive. Thank you Oregon.</p>",
-					"<h3>Oregon</h3><h4>[5/9]</h4>"
-					+"<p>I quite publically announced my battles with the Wilson River as they unfolded. By publically, I mean to any and all available ducks and to the fly fisherman several hundred meter upstream. This slimy aquatic lake runoff (rivers are just big glorified pond leaks) didn’t want me on the other side of it. But listen here, because I’ll tell ya what. Life is about picking your battles. And I’ve chosen all the battles that no one else wants to fight. Not because they’re too difficult, but because there is very little reward. I like to suffer in peace.</p>",
-					"<h3>Oregon</h3><h4>[6/9]</h4>"
-					+"<p>Three trips across the Wilson to ferry all of my gear across left me a man alone in the woods, taunting a river. I promptly apologized later in the evening after remembering we’d be at odds again in the morning when I try to get back to the car. But once again, let me tell you, when I had crossed the Wilson for the final time this trip, that sucker got one hell of a fist waggling.</p>",
-					"<h3>Oregon</h3><h4>[7/9]</h4>"
-					+"<p>I consider myself a relatively hardened outdoor enthusiast. And by that, I mean I’ve gotten myself in enough situations to accept that it will happen regularly. But boy howdy. I should stop going to the desert. Or I should stop going midday in the summer. Two hours of riding in that sandbox in the sky and even #sunhat couldn’t save me from some deep psychological questions about myself. I was channeling the song ‘Just The Two of Us’ for some time over this endeavor and that made me really doubt whether or not I thought there was someone else with me (#therewasnt). </p>",
-					"<h3>Oregon</h3><h4>[8/9]</h4>"
-					+"<p>My last complaint is to the US Forestry Service. You’d think with a name like that, they could identify that Ochoco National Forest is not a forest. It’s a desert. It’s hot. That should be in the title. Ochoco Festival of Hotness and Misery. (#sunhat required)</p>",
-					"<h3>Oregon</h3><h4>[9/9]</h4>"
-					+"<p>Hot Dog that was fun. I’ll be back Oregon, and I’ll dig those blueberries out of my cupholder one day. #4000milesofroadtripsand0timescleaningmycar</p>"
-		];
+		var footerText = {"oregon": 
+		{"modal-text": [
+		"<h3>Oregon</h3><h4>[1/9]</h4>"
+		+"<p>In more ways than a few, Oregon was a trip of doubling back. "
+		+"<br/>Part Twos. "
+		+"<br/>The Sequel."
+		+"<br/>Try again."
+		+"<br/>Do over."
+		+"<br/>That type of thing. "
+		+"</p>",
+		"<h3>Oregon</h3><h4>[2/9]</h4>"
+		+"<p> My car battery died more than once before I left my parking garage in Seattle. I missed my turn more than three times before I made my first stop. I dropped a handful of blueberries in between the arm rest and the center console before I finished the first tub. I remembered what the hell I’m doing with my life.</p>",
+		"<h3>Oregon</h3><h4>[3/9]</h4>"
+		+"<p>Dipping my teva-clad toes in the salty bathtub to the Left (the Pacific) for the first time got me all jazzed up. I forgot about life and passed out cold on the sand. I woke to a rad new sunburn for me to pick at for the next few days (everyone needs some good camp-entertainment).</p>",
+		"<h3>Oregon</h3><h4>[4/9]</h4>"
+		+"<p>I knew I was going to get sunburned, but my buns stayed planted firm in the ground. Moments don’t grab me often, I get pre-occupied, I’m a goal oriented being. But if a driftwood pillow on a deserted beach doesn’t grab your attention, then you’re not alive. And for the first time in awhile, I felt alive. Thank you Oregon.</p>",
+		"<h3>Oregon</h3><h4>[5/9]</h4>"
+		+"<p>I quite publically announced my battles with the Wilson River as they unfolded. By publically, I mean to any and all available ducks and to the fly fisherman several hundred meter upstream. This slimy aquatic lake runoff (rivers are just big glorified pond leaks) didn’t want me on the other side of it. But listen here, because I’ll tell ya what. Life is about picking your battles. And I’ve chosen all the battles that no one else wants to fight. Not because they’re too difficult, but because there is very little reward. I like to suffer in peace.</p>",
+		"<h3>Oregon</h3><h4>[6/9]</h4>"
+		+"<p>Three trips across the Wilson to ferry all of my gear across left me a man alone in the woods, taunting a river. I promptly apologized later in the evening after remembering we’d be at odds again in the morning when I try to get back to the car. But once again, let me tell you, when I had crossed the Wilson for the final time this trip, that sucker got one hell of a fist waggling.</p>",
+		"<h3>Oregon</h3><h4>[7/9]</h4>"
+		+"<p>I consider myself a relatively hardened outdoor enthusiast. And by that, I mean I’ve gotten myself in enough situations to accept that it will happen regularly. But boy howdy. I should stop going to the desert. Or I should stop going midday in the summer. Two hours of riding in that sandbox in the sky and even #sunhat couldn’t save me from some deep psychological questions about myself. I was channeling the song ‘Just The Two of Us’ for some time over this endeavor and that made me really doubt whether or not I thought there was someone else with me (#therewasnt). </p>",
+		"<h3>Oregon</h3><h4>[8/9]</h4>"
+		+"<p>My last complaint is to the US Forestry Service. You’d think with a name like that, they could identify that Ochoco National Forest is not a forest. It’s a desert. It’s hot. That should be in the title. Ochoco Festival of Hotness and Misery. (#sunhat required)</p>",
+		"<h3>Oregon</h3><h4>[9/9]</h4>"
+		+"<p>Hot Dog that was fun. I’ll be back Oregon, and I’ll dig those blueberries out of my cupholder one day. #4000milesofroadtripsand0timescleaningmycar</p>"
+		], 
+		"photosetSize": 49
+	},
+	"iceland": 
+	{"modal-text": 
+	["<h3>Iceland</h3><h4>[1/9]</h4>",
+	"<h3>Iceland</h3><h4>[2/9]</h4>",
+	"<h3>Iceland</h3><h4>[3/9]</h4>",
+	"<h3>Iceland</h3><h4>[4/9]</h4>",
+	"<h3>Iceland</h3><h4>[5/9]</h4>",
+	"<h3>Iceland</h3><h4>[6/9]</h4>",
+	"<h3>Iceland</h3><h4>[7/9]</h4>",
+	"<h3>Iceland</h3><h4>[8/9]</h4>",
+	"<h3>Iceland</h3><h4>[9/9]</h4>"],
+	"photosetSize": 39},
+	"olympic": 
+	{"modal-text": 
+	["<h3>Olympic April Fools</h3><h4>[1/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[2/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[3/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[4/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[5/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[6/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[7/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[8/9]</h4>",
+	"<h3>Olympic April Fools</h3><h4>[9/9]</h4>"],
+	"photosetSize": 9}
+};
+
+var places = ["oregon", "iceland", "olympic"];
+var currentPhotoset = "oregon";
 
 
 
-
+		$('#anotherThing').click(function(){
+			var newPhotoset = places[Math.floor(Math.random()*places.length)];
+			while(newPhotoset === currentPhotoset){
+ 				newPhotoset = places[Math.floor(Math.random()*places.length)];
+			}
+			newPhotos(newPhotoset);
+		});
 		$('#somethingElse').click(function(){
-			newPhotos();
+			newPhotos(currentPhotoset);
 		});
 
-		var imageSelect = function(numberImagesToSelect){
+		var imageSelect = function(photoset){
 			var imgSrcList = [];
 			var usedElems = [];
+			var numberImagesToSelect = 9;
 
 			for(var i = 0; i < numberImagesToSelect; i++){
-				var element = Math.floor(Math.random()*49+1);
+				var element = Math.floor(Math.random()*footerText[photoset]['photosetSize']+1);
 
 				while(usedElems.includes(element)){
-					element = Math.floor(Math.random()*49+1);
+					element = Math.floor(Math.random()*footerText[photoset]['photosetSize']+1);
 				}
 				usedElems.push(element);
 
-				var src = "src='img/oregon-compressed-"+element+".jpg'";
+				var src = "src='img/"+photoset+"/"+photoset+"-compressed-"+element+".jpg'";
 				imgSrcList.push(src);
 			}
 			return imgSrcList;
 		}
 
-		var newPhotos = function(){
+		var newPhotos = function(photoset){
+			currentPhotoset = photoset;
 			var pictureArrayHTML = "";
 			var usedElems = [];
-			var imgSrcList = imageSelect(9);
+			var imgSrcList = imageSelect(photoset);
 			$('.picture-array').html("");
 
 			for(var i = 0; i < 3; i++){
@@ -102,13 +141,13 @@
 				$('#photo-modal').modal('show');
 				var src_val = $(this).attr("src");
 				var modal_image = '<img class="col-md-12 modal-image" src="'+src_val+'">';
-				var modal_text = footerText[$(this).attr('data-number')];
+				var modal_text = footerText[photoset]['modal-text'][$(this).attr('data-number')];
 				$('.modal-body').html(modal_image);
 				$('.modal-footer').html(modal_text);
 			});
 
 		}
-		newPhotos();
+		newPhotos("oregon");
 
 
 	});
@@ -116,9 +155,13 @@
 <body class="col-md-8 col-md-offset-2">
 	<div class="col-md-10"><h4>t.montovani</h4></div>
 	<div class="col-md-2">
-		<input class="btn btn-default" type="button" value="something else" id="somethingElse">
+		<input class="btn btn-default" type="button" value="i want more of this" id="somethingElse">
 	</div>
 	<div class="container picture-array">
+	</div>
+
+		<div class="col-md-2">
+		<input class="btn btn-default" type="button" value="bring me somewhere different" id="anotherThing">
 	</div>
 
 	<!-- Modal -->
